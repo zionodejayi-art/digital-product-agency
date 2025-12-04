@@ -36,11 +36,10 @@ header {
   color: blue;
   transition: 0s ease ;
 }
-.hero{
+.hero {
   display: flex;
-  max-width:100%;
-  padding: 30px;
-  margin: 20px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
@@ -65,26 +64,21 @@ margin: 20px 0;
 color: #666;
 /* bottom: 100%; */
 }
-.img8{
- 
-  position: absolute;
-  left: 593; 
+.img8 {
+  max-width: 100%;
+  position: relative; /* remove absolute */
   z-index: 2;
-  bottom: -25px;
-  width:670px;
-  height: 500px;
-  
-
 }
+
 .img85{
 position: absolute;
-left:520;
-bottom: 348px;
+left:450;
+bottom: 340px;
 }
 .img89{
   position: absolute;
-  left: 890px;
-  top: 560px;
+  left: 900px;
+  top: 590px;
 }
 .button{
   background-color: blue;
@@ -92,20 +86,23 @@ bottom: 348px;
   border-radius: 20px;
   padding: 10px 20px;
   color: white;
-  position:absolute;
+  position:relative;
   left:150px ;
-  bottom: 220px;
+  bottom: 250px;
   z-index: 2;
 }
 .button:hover{
 background-color: white;
 color: blue;
+  border:1px solid blue ;
+box-shadow: 0px  1px 1px 0px ;
+transform: translateY(-5px );
+transition: all 0.5s;
 
-  transition: border-radius 0.4s ease, background-color 0.3s;
 }
 .img56{
   position: absolute;
-  bottom:100px ;
+  bottom:50px ;
   width: 350px;
   left: 100px;
 }
@@ -522,16 +519,226 @@ gap: 20px;
     padding-top: 20px;
     color: #666;
 }
-@media(max-width:400px){
-  header{
-        display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-  header h2{
-    padding: 10px;
-  }
-  .starters{
-    display: none;
-  }
+  
+
+@media(max-width: 900px) {
+
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    * {
+        max-width: 100% !important;
+    }
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        padding: 30px;
+        gap: 10px;
+    }
+    header h2{
+      position: relative;
+      right: 100px;
+    }
+
+    .starters {
+        display: none;
+        gap: 10px;
+        padding: 0;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        flex-direction: column;
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+        width: 90%;
+    }
+    {
+        display: none !important;  /* remove all hero decorations */
+    }
+
+    .img8{
+        width: 100%;
+        height: auto;
+        border-radius: 100px;
+        /* display: none; */
+    }
+
+    .button {
+        position:relative;
+        /* top: 50px; */
+        right: 50x;
+        /* margin: 50px auto; */
+        /* display: none; */
+    }
+
+    /* CLIENTS */
+    .clients {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .h2 {
+        text-align: center;
+        right: 0;
+    }
+
+    .logo {
+        /* flex-direction: column !important; */
+        width:90% ;
+        left: 0;
+        gap: 18px;
+    }
+    .img56{
+      display: none;
+    }
+
+    /* SERVICE CARDS */
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle,
+    .circle29,
+    .vice,
+    .dotted,
+    .img-circle {
+        display: none !important;  /* remove useless shapes */
+    }
+
+    .border-1,
+    .border-2,
+    .border-3,
+    .border-4 {
+        position: static !important;
+        margin: 20px 0;
+        width: 90% !important;
+        padding: 20px !important;
+    }
+    .help{
+      position: relative;
+      display: flex;
+      padding-right: 20%;
+      bottom: 100%;
+      display: none;
+    }
+
+    /* VIDEO / ABOUT */
+    .vid {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        display: none;
+    }
+
+    .video,
+    
+    
+    
+    .video img {
+        width: 100%;
+    }
+
+    .results {
+        position: static !important;
+        width: 90%;
+        text-align: center;
+        margin: 30px auto;
+        z-index: 2;
+    }
+
+    /* TESTIMONIAL */
+    .hero-5 {
+        height: auto !important;
+        padding: 20px;
+        text-align: center;
+    }
+    .tion {
+      display: none;
+    }
+
+    .place-15,
+    .place-16,
+    .place-17,
+    .place-18,
+    .place-19,
+    .place-20,
+    .place-21 {
+        position: static !important;
+        margin: 10px auto;
+        
+    }
+
+    .place-18{
+      display: none;
+    }
+    .place-19{
+      display: none;
+    }
+    .place-20{
+      display: none;
+    }
+    .place-21{
+      display: none;
+    }
+    .place-15 img {
+        width: 100% !important;
+    }
+
+    /* NEWSLETTER */
+    .pixle,
+    .ixle,
+    .mail,
+    .gamil,
+    .ition,
+    .e-mail {
+        position: static !important;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .input {
+        position: static !important;
+        margin: 20px auto;
+        width: 90%;
+        padding: 15px;
+        border-radius: 20px;
+        background: white;
+    }
+
+    .input input {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .input button {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+
+    /* FOOTER */
+    #footer {
+        flex-direction: column;
+        display: wrap;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+        text-align: center;
+    }
+
 }
