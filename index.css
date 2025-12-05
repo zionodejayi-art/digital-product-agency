@@ -32,9 +32,10 @@ header {
     cursor: pointer;
 }
 
-.starters:hover{
+.starters li:hover{
   color: blue;
-  transition: 0s ease ;
+  transform: translateY(-10px );
+transition: all 0.10s;
 }
 .hero {
   display: flex;
@@ -96,7 +97,7 @@ background-color: white;
 color: blue;
   border:1px solid blue ;
 box-shadow: 0px  1px 1px 0px ;
-transform: translateY(-5px );
+transform: translateY(-20px );
 transition: all 0.5s;
 
 }
@@ -219,6 +220,9 @@ position: relative;
  left: -460px;
 bottom: 80px;
 z-index: 2;
+  animation:bounce 0.9s linear infinite;
+transform: translateY(-20px );
+transition: all 0.1s;
 }
 
 .ion{
@@ -519,6 +523,9 @@ gap: 20px;
     padding-top: 20px;
     color: #666;
 }
+#fa {
+  display: none;
+}
   
 
 @media(max-width: 900px) {
@@ -534,20 +541,27 @@ gap: 20px;
 
     
     header {
-        flex-direction: column;
+        /* flex-direction: co; */
         padding: 30px;
         gap: 10px;
+        width: 80%;
+        margin: auto;
     }
     header h2{
       position: relative;
-      right: 100px;
+      right: 70px;
     }
-
+     #fa {
+      display: flex;
+      position: relative;
+      left: 85px;
+    }
     .starters {
         display: none;
         gap: 10px;
         padding: 0;
     }
+   
 
     
     .hero {
@@ -560,6 +574,7 @@ gap: 20px;
     .hero-text {
         margin: 0 auto;
         width: 90%;
+        
     }
     {
         display: none !important;  /* remove all hero decorations */
@@ -572,6 +587,9 @@ gap: 20px;
         /* display: none; */
     }
     .img85{
+      display: none;
+    }
+    .img89{
       display: none;
     }
 
@@ -626,7 +644,7 @@ gap: 20px;
     .border-4 {
         position: static !important;
         margin: 20px 0;
-        width: 90% !important;
+        width: 50% !important;
         padding: 20px !important;
     }
     .help{
@@ -735,12 +753,13 @@ gap: 20px;
 
     
     #footer {
+      display: wrap;
         flex-direction: column;
         display: wrap;
         gap: 20px;
         padding: 20px;
         height: auto;
-        text-align: center;
+        /* text-align: center; */
     }
 
 }
